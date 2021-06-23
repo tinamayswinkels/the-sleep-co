@@ -4,6 +4,7 @@
     Navy: #192B37;
 */
 
+/* CSS RESET */
 
 * {
     padding: 0;
@@ -12,28 +13,67 @@
 }
 
 
-/* Image Styles */
-.bg-image {
-    background-image: url('/images/the-sleep-co-original1.jpg');
-    background-size: cover;
-    min-height: 10rem;
-}
+/*---------------------------- Universal styles & utility classes  --------------------------------- */
 
-/* Universal styles & utility classes */
 
-body { 
-    font-family: 'Catamaran', sans-serif;
-    color: #192B37;
-}
+/* Padding Utility Classes --------------------  */ 
+.padded-sm { padding: 2.5%; }
+.padded     { padding: 5%;   }
+.padded-lg { padding: 10%;  }
 
-.padded     { padding: 5%; }
-.padded-sm  { padding: 1rem; }
-.padded-lg  { padding: 10%; }
+.padded-05 { padding: 0.5rem; }
+.padded-1  { padding: 1rem; }
+.padded-2  { padding: 2rem; }
 
-.bg-dark { 
-    background-color: #192B37;
-    color: white;
-}
+.padded-t  { padding-top: 5%; }
+.padded-b  { padding-bottom: 5%; }
+.padded-l  { padding-left: 5%; }
+.padded-r  { padding-bottom: 5%; }
+
+.padded-tb  { padding-top: 5%; padding-bottom: 5%; }
+.padded-lr  { padding-left: 5%; padding-right: 5%; }
+
+.padded-t-1  { padding-top: 1rem; }
+.padded-b-1  { padding-bottom: 1rem; }
+.padded-l-1  { padding-left: 1rem; }
+.padded-r-1  { padding-bottom: 1rem; }
+
+.padded-t-2  { padding-top: 2rem; }
+.padded-b-2  { padding-bottom: 2rem; }
+.padded-l-2  { padding-left: 2rem; }
+.padded-r-2  { padding-bottom: 2rem; }
+
+.padded-t-0  { padding-top: 0; }
+.padded-b-0  { padding-bottom: 0; }
+.padded-l-0  { padding-left: 0; }
+.padded-r-0  { padding-bottom: 0; }
+
+/* Margin Utility Classes --------------------  */ 
+
+.margin-t { margin-top: 5%; }
+.margin-b { margin-bottom: 5%; }
+.margin-l { margin-left: 5%; }
+.margin-r { margin-right: 5%; }
+
+.margin-t-1 { margin-top: 1rem; }
+.margin-b-1 { margin-bottom: 1rem; }
+.margin-l-1 { margin-left: 1rem; }
+.margin-r-1 { margin-right: 1rem; }
+
+.margin-t-2 { margin-top: 2rem; }
+.margin-b-2 { margin-bottom: 2rem; }
+.margin-l-2 { margin-left: 2rem; }
+.margin-r-2 { margin-right: 2rem; }
+
+.margin-t-0 { margin-top: 0; }
+.margin-b-0 { margin-bottom: 0; }
+.margin-l-0 { margin-left: 0; }
+.margin-r-0 { margin-right: 0; }
+
+.margin-tb  { margin-top: 5%; margin-bottom: 5%; }
+.margin-lr  { margin-left: 5%; margin-right: 5%; }
+
+/* Minimum Height -------------------- */
 
 .tall-50 {  min-height: 50vh; }
 .tall-60 {  min-height: 60vh; }
@@ -42,15 +82,44 @@ body {
 .tall-90 {  min-height: 90vh; }
 .tall-100 {  min-height: 100vh; }
 
+/* Backgrounds & Images  -------------------- */
 
-/* Typography Styles  */
-
-h2 {
-    font-size: 2.5rem;
-    line-height: 1.1;
-    margin-bottom: 1rem;
+.bg-dark { 
+    background-color: #192B37;
+    color: white;
 }
-h3 { line-height: 1; }
+.bg-featured { background-color: #F4B525; }
+.bg-light {  background-color: #E3ECF2; }
+
+/* Image Styles */
+.bg-image {
+    background-image: url('/images/the-sleep-co-original1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 10rem;
+}
+
+.landscape { padding-bottom: 65%;}
+.portrait { padding-bottom: 125%;}
+.square   { padding-bottom: 100%;}
+
+
+/*  Typography Styles  --------------------  */
+
+body { 
+    font-family: 'Catamaran', sans-serif;
+    color: #192B37;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    line-height: 1.1;
+} 
+
+h2 { font-size: 2.5rem; }
+h3 { font-size: 1.8rem; }
+h4 { font-size: 1.5rem; }
+
 
 p {
     font-weight: 200;
@@ -72,29 +141,6 @@ a:hover {
     color: #FFBE00;
 }
 
-.featured-text { color: #FFBE00; }
-.white-text { color: white; }
-
-.small-text     {   font-size: 1.5rem; }
-.medium-text    {   
-    font-size: 2rem; 
-    line-height:1.1;
-}
-.big-text       {   font-size: 4.5rem; }
-
-.subtitle { 
-    font-size: 1.2rem;
-    color: rgb(120,120,125);
-}
-
-.quote-icon {
-    font-size: 6rem;
-    display: inline-block;
-    color: rgb(120,120,125);
-    line-height: 1;
-}
-
-
 .font-weight-light { font-weight: 200; }
 .font-weight-normal { font-weight: normal; }
 .font-weight-extra-bold { font-weight: 800; }
@@ -103,15 +149,36 @@ a:hover {
 .text-center    {  text-align: center;  }
 .text-right     {  text-align: right;    }
 
+.featured-text  {  color: #FFBE00; }
+.white-text     {  color: white; }
+
+.small-text     {  font-size: 1.5rem; }
+.medium-text    {  font-size: 2rem; }
+.big-text       {  font-size: 4.5rem; }
+
+.subtitle { 
+    font-size: 1.2rem;
+    color: rgb(120,120,125);
+}
 
 
+/*  Font Awesome Icons --------------------  */
+.fas,
+.fab {
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+}
 
-/* Header & Footer styles  */
+
+/*  Header & Footer styles --------------------  */
 
 header {
     background-image: url('/images/the-sleep-co-original1.jpg');
     background-size: cover;
     background-position: center;
+    padding: 1% 5%;
 }
 
 header h3 {
@@ -124,7 +191,7 @@ footer a {
 }
 
 
-/*  Background Images  */
+/*  Background Images --------------------  */
 
 .bg-bed { background-image: url('/images/the-sleep-co-original3.jpg') }
 .bg-pug { 
@@ -137,10 +204,21 @@ footer a {
 }
 
 
-/* Icon Grid  */
-.fas {
+
+/* Buttons & Forms --------------------  */
+
+input, 
+textarea {
+    width: 100%;
     display: block;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 3rem;
+}
+
+
+/* Testimonial Block -------------------- */
+
+.quote-icon {
+    font-size: 6rem;
+    display: inline-block;
+    color: rgb(120,120,125);
+    line-height: 1;
 }
