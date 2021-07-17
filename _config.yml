@@ -15,5 +15,5 @@ _select_data:
     col-3: One Quarter
     col-6_sm-12: One Half (Stacked)
     col-4_sm-12: One Third (Stacked)
-    col-6_sm-12: One Quarter (Stacked)
+    col-3_sm-12: One Quarter (Stacked)
 
